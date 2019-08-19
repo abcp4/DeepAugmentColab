@@ -31,10 +31,11 @@ def denormalize(X):
 
 
 def transform(aug_type, magnitude, X):
-    if(aug_type=="nmo"):
+    print(aug_type)
+    if aug_type=="nmo" :
         print("nmo!!!!")
         X_aug = nmo(X,magnitude*400)
-    if aug_type == "crop":
+    elif aug_type == "crop":
         X_aug = iaa.Crop(px=(0, int(magnitude * 32))).augment_images(X)
     elif aug_type == "gaussian-blur":
         X_aug = iaa.GaussianBlur(sigma=(0, magnitude * 25.0)).augment_images(X)
