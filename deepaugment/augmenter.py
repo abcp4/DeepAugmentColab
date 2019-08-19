@@ -32,6 +32,7 @@ def denormalize(X):
 
 def transform(aug_type, magnitude, X):
     if(aug_type=="nmo"):
+        print("nmo!!!!")
         X_aug = nmo(X,magnitude*400)
     if aug_type == "crop":
         X_aug = iaa.Crop(px=(0, int(magnitude * 32))).augment_images(X)
