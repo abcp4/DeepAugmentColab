@@ -131,6 +131,7 @@ def transform(aug_type, magnitude, X):
     elif aug_type == "coarse-salt-pepper":
         X_aug = iaa.CoarseSaltAndPepper(p=0.2, size_percent=magnitude).augment_images(X)
     elif aug_type == "grayscale":
+        print('aug_type:',aug_type)
         X_aug = iaa.Grayscale(alpha=(0.0, magnitude)).augment_images(X)
     else:
         print('aug_type:',aug_type)
