@@ -133,6 +133,7 @@ def transform(aug_type, magnitude, X):
     elif aug_type == "grayscale":
         X_aug = iaa.Grayscale(alpha=(0.0, magnitude)).augment_images(X)
     else:
+        print('aug_type:',aug_type)
         raise ValueError
     return X_aug
 
