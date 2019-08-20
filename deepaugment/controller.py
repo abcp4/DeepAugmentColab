@@ -2,7 +2,7 @@
 
 import skopt
 import numpy as np
-"""
+
 AUG_TYPES = [
     "crop",
     "gaussian-blur",
@@ -36,6 +36,7 @@ AUG_TYPES = [
     "brighten",
     "invert"
 ]
+"""
 def augment_type_chooser():
     """A random function to choose among augmentation types
 
